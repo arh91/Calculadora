@@ -1,0 +1,78 @@
+<!doctype html>
+    <head>
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <fieldset>
+        <legend>Ingrese dos numeros</legend>
+        
+        <input type="text" id="numero1">
+        <br><br>
+        <select id="operacion" name="operacion">
+            <option value="1" selected="selected">Suma</option>
+            <option value="2">Resta</option>
+            <option value="3">Multiplicacion</option>
+            <option value="4">Division</option>
+        </select>
+        <br><br>
+        <input type="text" id="numero2">
+        <br><br>
+        
+        <input type="button" id="boton" onclick="operacion()" value="Pulsame">
+        <br><br>
+        <label for="">Resultado:</label>
+        <input type="text" id="resultado">
+        </fieldset>
+        
+    </body>
+    <script type="text/javascript">
+        function Sumar() {                
+            var n1 = document.getElementById("numero1").value;
+            var n2 = document.getElementById("numero2").value;
+            var resul = parseInt(n1) + parseInt(n2);
+            document.getElementById("resultado").value = resul;
+        }
+
+        function Restar() {    
+            var n1 = document.getElementById("numero1").value;
+            var n2 = document.getElementById("numero2").value;
+            var resul = parseInt(n1) - parseInt(n2);
+            document.getElementById("resultado").value = resul;
+        }
+
+        function Multiplicar() {    
+            var n1 = document.getElementById("numero1").value;
+            var n2 = document.getElementById("numero2").value;
+            var resul = parseInt(n1) * parseInt(n2);
+            document.getElementById("resultado").value = resul;
+        }
+
+        function Dividir() {    
+            var n1 = document.getElementById("numero1").value;
+            var n2 = document.getElementById("numero2").value;
+            var resul = parseInt(n1) / parseInt(n2);
+            document.getElementById("resultado").value = resul;
+        }
+
+        function operacion(){
+                    
+            if (document.getElementById("operacion").value==1){               
+                Sumar();
+            }
+            if (document.getElementById("operacion").value==2){
+                Restar();
+            }
+            if (document.getElementById("operacion").value==3){
+                Multiplicar();
+            }
+            if (document.getElementById("operacion").value==4){
+                Dividir();
+            }
+            
+        }
+
+        
+
+
+        </script>
+</html>
